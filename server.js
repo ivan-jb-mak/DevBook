@@ -1,7 +1,9 @@
+// Dependancies
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const passport = require("passport");
 
 // importing routes
 const users = require("./routes/api/users");
@@ -34,6 +36,12 @@ const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("MongoDB database connection established successfully!");
 });
+
+// Passport middleware
+app.use(passport.initialize());
+
+// Passport Config
+require("./config/passport")(passport);
 
 // Use routes
 app.use("/api/users", users);
