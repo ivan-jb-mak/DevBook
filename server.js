@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 
 // importing routes
 const users = require("./routes/api/users");
@@ -10,8 +11,14 @@ const posts = require("./routes/api/posts");
 const app = express();
 
 // middleware with cors
-app.use(cors());
-app.use(express.json()); //to parse json
+//app.use(cors());
+//app.use(express.json()); //to parse json
+app.use(express.json());
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 
 const uri = require("./config/keys").mongoURI; // Database configuration URI
 
@@ -27,8 +34,6 @@ const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("MongoDB database connection established successfully!");
 });
-
-app.get("/", (req, res) => res.send("Hello Dabi"));
 
 // Use routes
 app.use("/api/users", users);
