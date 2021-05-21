@@ -4,7 +4,7 @@ const isEmpty = require("./is-empty");
 module.exports = function validateRegisterInput(data) {
   let errors = {};
 
-  // Setting the field to an empty string if it's not empty
+  // Setting the field to an empty string if null or undefined
   data.name = !isEmpty(data.name) ? data.name : "";
   data.email = !isEmpty(data.email) ? data.email : "";
   data.password = !isEmpty(data.password) ? data.password : "";
