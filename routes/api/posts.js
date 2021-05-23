@@ -3,8 +3,9 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const passport = require("passport");
 
-// Load Profile and User Model
+// Load Profile and Post Model
 const Post = require("../../models/Post");
+const Profile = require("../../models/Profile");
 
 // Load validation files
 const validatePostInput = require("../../validation/post");
@@ -58,6 +59,31 @@ router.post(
       user: req.body.id,
     });
     newPost.save().then((post) => res.json(post));
+  }
+);
+
+// @route   DELETE api/posts/:id
+// @desc    Delete posts
+// @access  Private
+router.delete(
+  "/:id",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Profile.findOne({ user: req.user.id }).then((profile) => {
+      Post.findById(req.params.id)
+        .then((post) => {
+          // Check for post owner
+          if (post.user.toString() !== req.user.id) {
+            return res
+              .status(401)
+              .json({ notauthorized: "User not authorized" });
+          }
+          post.remove().then(() => res.json({ success: true }));
+        })
+        .catch((err) =>
+          res.status(404).json({ postnotfound: "No post found" })
+        );
+    });
   }
 );
 
