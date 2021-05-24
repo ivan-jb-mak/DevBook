@@ -9,7 +9,9 @@ const router = express.Router();
 
 //const User = require("../../models/User");
 
-router.get("/", (req, res) => res.send("User Route"));
+router.post("/", (req, res) => {
+  console.log(req.body);
+});
 
 // // @route    POST api/users
 // // @desc     Register user
