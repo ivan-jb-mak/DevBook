@@ -25,7 +25,7 @@ router.post(
     ).isLength({ min: 6 }),
   ],
   async (req, res) => {
-    // Handling response
+    // Handling request
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       // Sending back error messages in 400 response
@@ -77,7 +77,7 @@ router.post(
       jwt.sign(
         payload,
         config.get("jwtToken"),
-        { expiresIn: "360000" },
+        { expiresIn: "5 days" },
         (err, token) => {
           if (err) throw err;
           // Return token
