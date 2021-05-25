@@ -1,36 +1,38 @@
 const express = require("express");
 const router = express.Router();
-// const axios = require('axios');
-// const config = require('config');
-// const auth = require('../../middleware/auth');
-// const { check, validationResult } = require('express-validator');
-// // bring in normalize to give us a proper url, regardless of what user entered
-// const normalize = require('normalize-url');
-// const checkObjectId = require('../../middleware/checkObjectId');
+const auth = require("../../middleware/auth");
+const axios = require("axios");
+const config = require("config");
+const { check, validationResult } = require("express-validator");
+// bring in normalize to give us a proper url, regardless of what user entered
+const normalize = require("normalize-url");
+// const checkObjectId = require("../../middleware/checkObjectId");
 
-// const Profile = require('../../models/Profile');
-// const User = require('../../models/User');
-// const Post = require('../../models/Post');
+const Profile = require("../../models/Profile");
+const User = require("../../models/User");
+const Post = require("../../models/Post");
 
-// // @route    GET api/profile/me
-// // @desc     Get current users profile
-// // @access   Private
-// router.get('/me', auth, async (req, res) => {
-//   try {
-//     const profile = await Profile.findOne({
-//       user: req.user.id
-//     }).populate('user', ['name', 'avatar']);
+// @route    GET api/profile/me
+// @desc     Get current users profile
+// @access   Private
+router.get("/me", auth, async (req, res) => {
+  try {
+    // Find user by ID
+    const profile = await Profile.findOne({
+      user: req.user.id,
+    }).populate("user", ["name", "avatar"]);
 
-//     if (!profile) {
-//       return res.status(400).json({ msg: 'There is no profile for this user' });
-//     }
+    // No ID found
+    if (!profile) {
+      return res.status(400).json({ msg: "There is no profile for this user" });
+    }
 
-//     res.json(profile);
-//   } catch (err) {
-//     console.error(err.message);
-//     res.status(500).send('Server Error');
-//   }
-// });
+    res.json(profile); // Sending user profile in response
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
+});
 
 // // @route    POST api/profile
 // // @desc     Create or update user profile
