@@ -16,12 +16,32 @@ const Register = () => {
   const onChange = (e) =>
     setformData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
       console.log("Passwords do no match");
     } else {
-      console.log(formData);
+      // BELOW COMMENTED CODE WILL GO INTO REDUX ACTION
+      // const newUser = {
+      //   name,
+      //   email,
+      //   password,
+      // };
+
+      // try {
+      //   const config = {
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //   };
+
+      //   const body = JSON.stringify(newUser);
+      //   const res = await axios.post("/api/users", body, config);
+      //   console.log(res.data);
+      // } catch (err) {
+      //   console.log(err.response.data);
+      // }
+      console.log("SUCCESSFULLY REGISTERED");
     }
   };
 
