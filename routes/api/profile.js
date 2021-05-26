@@ -172,37 +172,56 @@ router.delete("/", auth, async (req, res) => {
   }
 });
 
-// // @route    PUT api/profile/experience
-// // @desc     Add profile experience
-// // @access   Private
-// router.put(
-//   '/experience',
-//   auth,
-//   check('title', 'Title is required').notEmpty(),
-//   check('company', 'Company is required').notEmpty(),
-//   check('from', 'From date is required and needs to be from the past')
-//     .notEmpty()
-//     .custom((value, { req }) => (req.body.to ? value < req.body.to : true)),
-//   async (req, res) => {
-//     const errors = validationResult(req);
-//     if (!errors.isEmpty()) {
-//       return res.status(400).json({ errors: errors.array() });
-//     }
+// @route    PUT api/profile/experience
+// @desc     Add profile experience
+// @access   Private
+router.put(
+  "/experience",
+  [
+    auth,
+    // Express-validation
+    [
+      check("title", "Title is required").notEmpty(),
+      check("company", "Company is required").notEmpty(),
+      check("from", "From date is required").notEmpty(),
+    ],
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
 
-//     try {
-//       const profile = await Profile.findOne({ user: req.user.id });
+    // Destructuring request body
+    const { title, company, location, from, to, current, description } =
+      req.body;
 
-//       profile.experience.unshift(req.body);
+    // New experience object
+    const newExp = {
+      title,
+      company,
+      location,
+      from,
+      to,
+      current,
+      description,
+    };
 
-//       await profile.save();
+    try {
+      // Fetching profile by userid
+      const profile = await Profile.findOne({ user: req.user.id });
 
-//       res.json(profile);
-//     } catch (err) {
-//       console.error(err.message);
-//       res.status(500).send('Server Error');
-//     }
-//   }
-// );
+      profile.experience.unshift(newExp); // Push onto the beginning of exp array
+
+      await profile.save();
+
+      res.json(profile);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send("Server Error");
+    }
+  }
+);
 
 // // @route    DELETE api/profile/experience/:exp_id
 // // @desc     Delete experience from profile
