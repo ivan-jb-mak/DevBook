@@ -1,4 +1,4 @@
-import { axios } from "axios";
+import axios from "axios";
 import { setAlert } from "./alert";
 import { REGISTER_SUCCESS, REGISTER_FAIL } from "./types";
 
@@ -24,7 +24,9 @@ export const register =
 
       //dispatch(loadUser());
     } catch (err) {
-      const errors = err.response.data.errors;
+      console.log("this is the error", err);
+      const { errors } = err.response.data;
+      // const errors = err.response.data.errors;
 
       if (errors) {
         errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
