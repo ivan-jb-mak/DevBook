@@ -15,9 +15,8 @@ const User = require("../../models/User");
 // @access   Public
 router.post(
   "/",
-  // Express-validation with error messages
   [
-    check("name", "Name is required").notEmpty(),
+    check("name", "Name is required").not().isEmpty(),
     check("email", "Please include a valid email").isEmail(),
     check(
       "password",
@@ -25,10 +24,8 @@ router.post(
     ).isLength({ min: 6 }),
   ],
   async (req, res) => {
-    // Handling request
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      // Sending back error messages in 400 response
       return res.status(400).json({ errors: errors.array() });
     }
 

@@ -7,7 +7,7 @@ const initialState = {
   user: null,
 };
 
-export default function (state = initialState) {
+export default function (state = initialState, action) {
   // Destructuring
   const { type, payload } = action;
 
