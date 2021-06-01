@@ -108,4 +108,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default connect()(Register);
