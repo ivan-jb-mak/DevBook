@@ -1,8 +1,9 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { setAlert } from "../../actions/alert";
 
-const Register = () => {
+const Register = (props) => {
   const [formData, setformData] = useState({
     // Initial state for formData object
     name: "",
@@ -20,7 +21,7 @@ const Register = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
-      console.log("Passwords do no match");
+      props.setAlert("Passwords do no match", "danger");
     } else {
       // BELOW COMMENTED CODE WILL GO INTO REDUX ACTION
       // const newUser = {
@@ -108,4 +109,4 @@ const Register = () => {
   );
 };
 
-export default connect()(Register);
+export default connect(null, { setAlert })(Register);
