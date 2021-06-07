@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ivan-jb-mak/CodeBook.git"
+    "url": "git+https://github.com/ivan-jb-mak/DevBook.git"
   },
   "author": "Ivan Mak",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ivan-jb-mak/CodeBook/issues"
+    "url": "https://github.com/ivan-jb-mak/DevBook/issues"
   },
-  "homepage": "https://github.com/ivan-jb-mak/CodeBook#readme",
+  "homepage": "https://github.com/ivan-jb-mak/DevBook#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
