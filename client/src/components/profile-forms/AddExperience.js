@@ -25,7 +25,7 @@ const AddExperience = ({ addExperience, history }) => {
   return (
     <Fragment>
       <section className="container">
-        <h1 className="large text-primary">Add An Experience</h1>
+        <h1 className="large text-primary2">Add An Experience</h1>
         <p className="lead">
           <i className="fas fa-code-branch"></i> Add any developer/programming
           positions that you have had in the past
@@ -112,7 +112,7 @@ const AddExperience = ({ addExperience, history }) => {
             ></textarea>
           </div>
           <input type="submit" className="btn btn-primary my-1" />
-          <Link className="btn btn-light my-1" to="/dashboard">
+          <Link className="btn btn-dark my-1" to="/dashboard">
             Go Back
           </Link>
         </form>

@@ -1,10 +1,10 @@
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
-  --dark-color: #343a40;
-  --light-color: #f4f4f4;
-  --danger-color: #dc3545;
-  --success-color: #28a745;
+  --primary-color: hsl(263, 47%, 52%);
+  --dark-color: hsl(210, 10%, 23%);
+  --light-color: hsl(0, 0%, 96%);
+  --danger-color: hsl(354, 70%, 54%);
+  --success-color: hsl(134, 61%, 41%);
 }
 
 * {
@@ -72,6 +72,10 @@ img {
 
 .text-dark {
   color: var(--dark-color);
+}
+
+.text-primary2 {
+  color: var(--primary-color);
 }
 
 /* Padding */
@@ -160,7 +164,15 @@ img {
 .bg-primary,
 .badge-primary,
 .alert-primary {
-  background: var(--primary-color);
+  background: hsl(263, 47%, 52%);
+  color: #fff;
+}
+
+.btn-primary2,
+.bg-primary2,
+.badge-primary2,
+.alert-primary2 {
+  background: hsl(263, 47%, 52%);
   color: #fff;
 }
 
