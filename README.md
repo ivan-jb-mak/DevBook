@@ -5,7 +5,7 @@ A brief description of what this project does and who it's for
 
 ## Live Link
 
-[developerbook.me](developerbook.me)
+[developerbook.me](www.developerbook.me)
 
 ## Key Features
 * User Authentication with JWT (Json Web Token)
@@ -31,7 +31,7 @@ A brief description of what this project does and who it's for
 Insert gif or link to demo
 
 ## Dependancies
-**Backend:**
+**Backend (Server):**
 * bcrytpjs
 * config
 * cors
@@ -44,7 +44,7 @@ Insert gif or link to demo
 * passport-jwt
 * request
 
-**Frontend:**
+**Frontend (Client):**
 * moment
 * react
 * react-dom
