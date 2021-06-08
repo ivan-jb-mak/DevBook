@@ -1,11 +1,11 @@
 
 # DevBook
 
-A brief description of what this project does and who it's for
+A social media app for developers to share their profiles, experiences and skills, as well as share posts and help other developers.
 
 ## Live Link
 
-[developerbook.me](www.developerbook.me)
+[DevBook](www.developerbook.me)
 
 ## Key Features
 * User Authentication with JWT (Json Web Token)
