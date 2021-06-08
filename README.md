@@ -30,6 +30,9 @@ A social media app for developers to share their profiles, experiences and skill
 
 Insert gif or link to demo
 
+Landing Page: 
+![alt text](https://https://github.com/ivan-jb-mak/DevBook/blob/master/documents/LandingPage.png "Landing Page")
+
 ## Dependancies
 **Backend (Server):**
 * bcrytpjs
