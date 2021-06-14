@@ -17,6 +17,7 @@ https://developerbook.me/
 - Create/Delete comments on Posts
 - Delete Account
 - Sign up with Gravatar email
+- Dynamic navigation bar
 
 ## Tech Stack
 
@@ -25,6 +26,7 @@ https://developerbook.me/
 - ReactJS
 - NodeJS
 - Redux
+- Bootstrap
 
 ## Demo
 ### Landing Page
