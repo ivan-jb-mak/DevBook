@@ -21,11 +21,11 @@ https://developerbook.me/
 
 ## Tech Stack
 
-- [MongoDB](https://www.mongodb.com/)
-- [Express](https://expressjs.com/)
 - [ReactJS](https://reactjs.org/)
-- [NodeJS](https://nodejs.org/en/)
 - [Redux](https://redux.js.org/)
+- [NodeJS](https://nodejs.org/en/)
+- [ExpressJS](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
 - [Bootstrap](https://getbootstrap.com/)
 
 ## Demo
