@@ -2,7 +2,7 @@
 
 A social media app for developers to share their profiles, experiences and skills, as well as share posts and help other developers. Built with the MERN stack.
 
-## Live Link
+## Live Link (Deployed on Heroku and Netlify)
 
 https://developerbook.me/
 
@@ -21,12 +21,12 @@ https://developerbook.me/
 
 ## Tech Stack
 
-- MongoDB
-- Express
-- ReactJS
-- NodeJS
-- Redux
-- Bootstrap
+- [MongoDB](https://www.mongodb.com/)
+- [Express](https://expressjs.com/)
+- [ReactJS](https://reactjs.org/)
+- [NodeJS](https://nodejs.org/en/)
+- [Redux](https://redux.js.org/)
+- [Bootstrap](https://getbootstrap.com/)
 
 ## Demo
 ### Landing Page
@@ -62,30 +62,29 @@ https://developerbook.me/
 
 **Back End (Server):**
 
-- bcrytpjs
+- [bcrytpjs](https://www.npmjs.com/package/bcryptjs)
 - config
-- cors
-- express
-- express-validator
-- gravatar
-- jsonwebtoken
-- mongoose
-- passport
-- passport-jwt
+- [cors](https://www.npmjs.com/package/cors)
+- [express](https://www.npmjs.com/package/express)
+- [express-validator](https://www.npmjs.com/package/express-validator)
+- [gravatar](https://www.npmjs.com/package/gravatar)
+- [jsonwebtoken](https://jwt.io/)
+- [mongoose](https://mongoosejs.com/)
+- [passport](https://www.npmjs.com/package/passport)
+- [passport-jwt](https://www.npmjs.com/package/passport-jwt)
 - request
 
 **Front End (Client):**
 
-- moment
-- react
-- react-dom
-- react-moment
-- react-redux
-- react-router
-- react-router-dom,
-- react-scripts
-- redux
-- redux-devtools-extension
-- redux-thunk
-- uuid
-- web-vitals
+- [moment](https://www.npmjs.com/package/moment)
+- [react](https://www.npmjs.com/package/react)
+- [react-dom](https://www.npmjs.com/package/react-dom)
+- [react-moment](https://www.npmjs.com/package/react-moment)
+- [react-redux](https://www.npmjs.com/package/react-redux)
+- [react-router](https://www.npmjs.com/package/react-router)
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [redux](https://www.npmjs.com/package/redux)
+- [redux-devtools-extension](https://www.npmjs.com/package/redux-devtools-extension)
+- [redux-thunk](https://www.npmjs.com/package/redux-thunk)
+- [uuid](https://www.npmjs.com/package/uuid)
+
