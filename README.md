@@ -4,20 +4,12 @@ A social media app for developers to share their profiles, experiences and skill
 
 ## Live Link
 
-[DevBook](www.developerbook.me)
+https://developerbook.me/
 
 ## Key Features
 
 - User Authentication with JWT (Json Web Token)
 - Create user profiles
-- -
--
--
--
--
--
--
--
 
 ## Tech Stack
 
@@ -28,15 +20,13 @@ A social media app for developers to share their profiles, experiences and skill
 - Redux
 
 ## Demo
+### Landing Page
 
-Insert gif or link to demo
-
-Landing Page:
 ![alt text](https://github.com/ivan-jb-mak/DevBook/blob/master/screenshots/LandingPage.JPG "Landing Page")
 
-## Dependancies
+## Dependencies
 
-**Backend (Server):**
+**Back End (Server):**
 
 - bcrytpjs
 - config
@@ -50,7 +40,7 @@ Landing Page:
 - passport-jwt
 - request
 
-**Frontend (Client):**
+**Front End (Client):**
 
 - moment
 - react
