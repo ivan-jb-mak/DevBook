@@ -18,6 +18,8 @@ https://developerbook.me/
 - Delete Account
 - Sign up with Gravatar email
 - Dynamic navigation bar
+- ES6 Syntax and Arrow Functions
+- Async and Await 
 
 ## Tech Stack
 
