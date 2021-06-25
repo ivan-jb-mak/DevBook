@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { login } from "../../actions/auth";
-
+import Demo from "./Demo";
 import PropTypes from "prop-types";
 
 const Login = ({ login, isAuthenticated }) => {
@@ -36,9 +36,10 @@ const Login = ({ login, isAuthenticated }) => {
       </p>
       <form className="form" onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
+          <h4 className="email-password">Email</h4>
           <input
             type="email"
-            placeholder="Email Address"
+            placeholder="demo@demo.com"
             name="email"
             value={email}
             onChange={(e) => onChange(e)}
@@ -46,9 +47,10 @@ const Login = ({ login, isAuthenticated }) => {
           />
         </div>
         <div className="form-group">
+          <h4 className="email-password">Password</h4>
           <input
             type="password"
-            placeholder="Password"
+            placeholder="123456"
             name="password"
             value={password}
             onChange={(e) => onChange(e)}
@@ -57,6 +59,7 @@ const Login = ({ login, isAuthenticated }) => {
           />
         </div>
         <input type="submit" className="btn btn-primary" value="Login" />
+        <Demo />
       </form>
       <p className="my-3">
         Don't have an account? <Link to="/register">Sign Up</Link>

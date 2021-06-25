@@ -64,18 +64,20 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       </p>
       <form className="form" onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
+          <h4 className="email-password">Name</h4>
           <input
             type="text"
-            placeholder="Name"
+            placeholder="John Doe"
             name="name"
             value={name}
             onChange={(e) => onChange(e)}
           />
         </div>
         <div className="form-group">
+          <h4 className="email-password">Email</h4>
           <input
             type="email"
-            placeholder="Email Address"
+            placeholder="johndoe@gmail.com"
             name="email"
             value={email}
             onChange={(e) => onChange(e)}
@@ -86,6 +88,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           </small>
         </div>
         <div className="form-group">
+          <h4 className="email-password">Password</h4>
           <input
             type="password"
             placeholder="Password"
@@ -95,6 +98,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           />
         </div>
         <div className="form-group">
+          <h4 className="email-password">Confirm Password</h4>
           <input
             type="password"
             placeholder="Confirm Password"

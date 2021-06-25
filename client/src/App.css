@@ -501,6 +501,10 @@ button {
   margin-bottom: 0.5rem;
 }
 
+.email-password {
+  margin-bottom: 6px;
+}
+
 /* Mobile Styles */
 @media (max-width: 700px) {
   .container {
