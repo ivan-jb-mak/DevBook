@@ -6,6 +6,11 @@ A social media app for developers to share their profiles, experiences and skill
 
 https://developerbook.me/
 
+## Demo Account Info
+Email: demo@demo.com
+<br>
+Password: 123456
+
 ## Key Features
 
 - User Authentication with JWT (Json Web Token)
@@ -20,6 +25,7 @@ https://developerbook.me/
 - Dynamic navigation bar
 - ES6 Syntax and Arrow Functions
 - Async and Await 
+- Demo Button to show credentials
 
 ## Tech Stack
 
@@ -32,8 +38,10 @@ https://developerbook.me/
 
 ## Demo
 ### Landing Page
-
 ![alt text](https://github.com/ivan-jb-mak/DevBook/blob/master/screenshots/LandingPage.JPG "Landing Page")
+
+### Demo Button 
+![alt text](https://github.com/ivan-jb-mak/DevBook/blob/master/screenshots/Demo.gif "Demo button")
 
 ### User Authentication
 ![alt text](https://github.com/ivan-jb-mak/DevBook/blob/master/screenshots/UserAuthentication.gif "User Authentication")
